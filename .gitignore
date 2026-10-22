@@ -1,8 +1,29 @@
-data/
-node_modules
-node_modules
-.pytest_cache
+# Dependencies
+node_modules/
 
-.DS_Store
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
 __pycache__/
+*.pyc
+env/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases and uploaded files
+*.db
+*.sqlite3
+backend/uploads/
+
+# Test reports
+report*.html
 test-results/
+
+# Local data and OS files
+data/
+.DS_Store
