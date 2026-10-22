@@ -4,6 +4,7 @@ from app.patient_routes import router as patient_router
 from app.doctor_routes import router as doctor_router
 from app.lab_routes import router as lab_router
 from app.user_routes import router as user_router
+from app.chatbot_routes import router as chatbot_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import websockets.client
@@ -41,6 +42,7 @@ app.include_router(user_router, prefix="/users", tags=["users"])
 app.include_router(patient_router, prefix="/patients", tags=["patients"])
 app.include_router(doctor_router, prefix="/doctors", tags=["doctors"])
 app.include_router(lab_router, prefix="/labs", tags=["labs"])
+app.include_router(chatbot_router, prefix="/chatbot", tags=["chatbot"])
 
 # Static file handling for uploads
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
