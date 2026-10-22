@@ -15,7 +15,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }) => {
         setTimeout(() => {
             //Add thinking placeholder for bot's response
             setChatHistory((history) => [...history, { role: "model", text: "Thinking..." }]);
-            // call th function to generate response
+            // call the function to generate response
             generateBotResponse([...chatHistory, { role: "user", text: userMessage }]);
         }, 600);
 
@@ -25,7 +25,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }) => {
         <form action="#" className="chat-form" onSubmit={handleFormSubmit}>
             <input ref={inputRef} type="text" placeholder="Message..."
                 className="message-input" required />
-            <button class="material-symbols-rounded">
+            <button className="material-symbols-rounded">
                 arrow_upward
             </button>
         </form>
